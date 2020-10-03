@@ -99,4 +99,4 @@ _The authors of this module should be contacted via the [issue tracker][1]._
 
 - [Sorin Ionescu](https://github.com/sorin-ionescu)
 
-[1]: https://github.com/sorin-ionescu/prezto/issues
+[1]: https://github.com/sorin-ionescu/oh-my-zsh/issues

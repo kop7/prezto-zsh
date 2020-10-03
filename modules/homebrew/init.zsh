@@ -5,11 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Load dependencies.
-pmodload 'helper'
-
 # Return if requirements are not found.
-if ! is-darwin && ! is-linux; then
+if [[ "$OSTYPE" != (darwin|linux)* ]]; then
   return 1
 fi
 

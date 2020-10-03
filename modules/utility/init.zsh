@@ -137,16 +137,12 @@ if zstyle -t ':prezto:module:utility:grep' color; then
 fi
 
 # macOS Everywhere
-if is-darwin; then
+if [[ "$OSTYPE" == darwin* ]]; then
   alias o='open'
-elif is-cygwin; then
+elif [[ "$OSTYPE" == cygwin* ]]; then
   alias o='cygstart'
   alias pbcopy='tee > /dev/clipboard'
   alias pbpaste='cat /dev/clipboard'
-elif is-termux; then
-  alias o='termux-open'
-  alias pbcopy='termux-clipboard-set'
-  alias pbpaste='termux-clipboard-get'
 else
   alias o='xdg-open'
 
@@ -183,7 +179,7 @@ unset _download_helper{,s}
 alias df='df -kh'
 alias du='du -kh'
 
-if is-darwin || is-bsd; then
+if [[ "$OSTYPE" == (darwin*|*bsd*) ]]; then
   alias topc='top -o cpu'
   alias topm='top -o vsize'
 else
