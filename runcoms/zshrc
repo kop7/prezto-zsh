@@ -11,3 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+prompt damoekri
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=226"
+export PATH=$PATH:$JAVA_HOME/bin
